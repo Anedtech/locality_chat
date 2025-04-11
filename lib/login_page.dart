@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:locality_chat/register_page.dart';
 
 class LoginPage extends StatelessWidget {
   const LoginPage({super.key});
@@ -112,7 +113,12 @@ class LoginPage extends StatelessWidget {
                 style: TextStyle(color: Colors.white),
               ),
               TextButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => RegisterPage()),
+                  );
+                },
                 style: TextButton.styleFrom(foregroundColor: Colors.white),
                 child: Text('Register Now'),
               ),
